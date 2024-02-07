@@ -12,6 +12,7 @@ int main() {
     printArray(arr, size);
     bubble_sort(arr, size);
     printArray(arr, size);
+    repeating_elemet(arr, size);
 
 }
 
@@ -39,3 +40,18 @@ void bubble_sort(int *arr, int size) {
 
     }
 }
+
+void repeating_element(int *arr, int size) {
+    //bubble_sort(arr, size);
+    for (int i = 0; i < size; i++) {
+        int flag=0;
+        while (i < n -1 && arr[i] == arr[i+1]) {
+            flag = 1;
+            i++;
+        }
+        if (flag==1) {
+            printf("%d", arr[i-1]);
+        }
+    }
+
+} 
