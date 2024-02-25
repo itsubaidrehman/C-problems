@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <cs50.h>
+
 #define max_size 100
 void getArray(int *, int);
 void printArray(int *, int);
@@ -6,6 +8,7 @@ void reverseArray(int *, int);
 int main() {
     int arr[max_size];
     int size;
+    char *s = get_string("s : ");
     scanf("%d", &size);
     getArray(arr,size);
     printArray(arr, size);
